@@ -358,10 +358,3 @@
   if (reduce) draw(0);
   else requestAnimationFrame(draw);
 })();
-
-// 메일 주소는 페이지 코드에 통째로 적지 않고 여기서 조립한다(주소 수집 프로그램 대비).
-document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
-  var m = el.dataset.u + '@' + el.dataset.d;
-  if (el.tagName === 'A') el.href = 'mailto:' + m;
-  if (el.hasAttribute('data-show')) el.textContent = m;
-});

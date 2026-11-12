@@ -245,7 +245,6 @@ footer .links { display: flex; gap: 18px; }
 @media (max-width: 505px) { .nav-b { display: none; } }
 @media (max-width: 409px) { .nav-a { display: none; } }
 @media (max-width: 345px) { .nav-g { display: none; } }
-.mail-addr { display: block; margin-top: 6px; color: var(--soft); font-size: 14px; }
 
 /* ---------- 언어 메뉴 ---------- */
 header.nav { z-index: 5; } /* 펼친 언어 메뉴가 아래 본문에 가려지지 않게 */
