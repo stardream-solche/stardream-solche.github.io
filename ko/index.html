@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solche — 아무에게도 보여주지 않는 나만의 SNS</title>
+<meta name="description" content="아무에게도 보여주지 않는 나만의 SNS. 계정도 서버도 없이, 모든 기록은 오직 내 기기 속에만 남습니다.">
+<meta property="og:title" content="Solche — 아무에게도 보여주지 않는 나만의 SNS">
+<meta property="og:description" content="계정도 서버도 없이, 모든 기록은 오직 내 기기 속에만 남습니다.">
+<meta property="og:image" content="https://stardream-solche.github.io/img/ko/tl-light.jpg">
+<link rel="canonical" href="https://stardream-solche.github.io/ko/">
+<link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/">
+<link rel="alternate" hreflang="ko" href="https://stardream-solche.github.io/ko/">
+<link rel="alternate" hreflang="ja" href="https://stardream-solche.github.io/ja/">
+<link rel="alternate" hreflang="x-default" href="https://stardream-solche.github.io/">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="wrap nav">
+  <a class="brand" href="./"><img src="../img/icon.png" alt=""> Solche</a>
+  <nav>
+    <a class="nav-c" href="#why">어떤 앱인가요</a>
+    <a href="guide/">기능 둘러보기</a>
+    <a class="nav-b" href="#privacy">프라이버시</a>
+    <a class="nav-a" href="https://ko-fi.com/stardream_software">후원하기</a>
+    <details class="lang"><summary aria-label="Language">한국어</summary><div><a href="../" data-lang="en" lang="en">English</a><a href="../ko/" data-lang="ko" lang="ko" aria-current="true">한국어</a><a href="../ja/" data-lang="ja" lang="ja">日本語</a></div></details>
+    <a class="btn small" href="#download">다운로드</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="stage">
+      <div class="win">
+        <div class="bar"><i></i><i></i><i></i><span>Solche</span></div>
+        <div class="shot"><img src="../img/ko/desktop.jpg" alt="데스크톱에서 본 Solche 타임라인" width="1800" height="1057"></div>
+      </div>
+      <div class="phone hero-phone" id="hero-phone">
+        <img class="day" src="../img/ko/tl-light.jpg" alt="휴대폰에서 본 Solche 타임라인" width="900" height="1957">
+        <img class="dark" src="../img/ko/tl-dark.jpg" alt="다크 모드로 본 Solche 타임라인" width="900" height="1957">
+      </div>
+      <div class="mode" role="group" aria-label="휴대폰 화면 밝기">
+        <button type="button" class="on" data-mode="day" aria-pressed="true">낮</button>
+        <button type="button" data-mode="dark" aria-pressed="false">밤</button>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>아무에게도 보여주지 않는<br><em>나만의 SNS</em></h1>
+      <p class="lead">SNS에 툭 던지듯 가볍게 적어 보세요. 스쳐 가는 생각도, 일상 사진도, 내 글에 달아 둔 답글까지 전부 내 기기 안에만 머물거든요. 계정도, 서버도, 눈치 볼 사람도 없습니다.</p>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/solche/id6758111055">App Store에서 무료로 받기</a>
+        <span>iPhone · iPad · Mac · Windows 정식 출시<br><a href="#download">Windows · Android · Linux 안내</a></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head">
+        <h2>빈 메모장은 첫 줄부터 막막하지만,<br>타임라인엔 한 줄이면 충분하니까요</h2>
+      </div>
+      <div class="three">
+        <div class="say">
+          <small>일반 메모장</small>
+          <b>"제목을 뭐라고 적지?"</b>
+          <p>새 문서를 펼치면 하얀 여백부터 부담스럽죠. 한두 줄짜리 혼잣말을 파일 하나로 만들자니 애매해서 결국 창을 닫게 됩니다.</p>
+        </div>
+        <div class="say">
+          <small>SNS 비공개 계정</small>
+          <b>"혹시라도 누가 보면 어쩌지?"</b>
+          <p>자물쇠를 걸어 둬도 결국 누군가의 서버에 남는 글이니까요. 진짜 속마음은 끝내 삼키게 되더라고요.</p>
+        </div>
+        <div class="say solche">
+          <small>Solche</small>
+          <b>"그냥 떠오르는 대로 툭."</b>
+          <p>입력칸에 적고 저장만 누르면 끝! 최신 글이 위로 차곡차곡 쌓이고, 내 기기 밖으로는 한 글자도 나가지 않아요.</p>
+        </div>
+      </div>
+
+      <div class="try" aria-label="Solche 직접 써 보기">
+        <span class="tape"></span>
+        <div class="try-top">
+          <b>여기서 직접 한 줄 적어 보세요</b>
+          <span>새로고침하면 깔끔하게 사라져요. 여기에 적은 글도 당연히 어디로도 전송되지 않습니다.</span>
+        </div>
+        <form id="try-form" class="try-form">
+          <span class="ava" aria-hidden="true"></span>
+          <input id="try-input" type="text" maxlength="200" placeholder="메모를 입력하세요" aria-label="메모 입력">
+          <button class="btn small" type="submit">저장</button>
+        </form>
+        <div id="try-feed"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenes">
+    <div class="wrap">
+      <div class="head">
+        <h2>타임라인은 하나, 즐기는 법은 내 마음대로</h2>
+      </div>
+      <div class="scenes">
+        <div class="scene-phone is-desk">
+          <div class="phone" id="scene-phone">
+            <img src="../img/ko/tl-light.jpg" alt="" width="900" height="1957" class="on">
+            <img src="../img/ko/photos.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="../img/ko/thread.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="../img/ko/tl-dark.jpg" alt="" width="900" height="1957" loading="lazy">
+            <div class="focus" id="scene-focus"></div>
+          </div>
+          <div class="desk stage" id="scene-desk" aria-hidden="true">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="../img/ko/desk-narrow.jpg" alt="" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="scene-text">
+          <article data-scene="0" class="on">
+            <small>책상 한구석에서</small>
+            <h3>모니터 옆에 좁게 세워 두고</h3>
+            <p>창 폭을 좁게 줄여서 작업 화면 옆에 살짝 붙여 두세요. 올해 다짐이나 좋아하는 문장을 맨 위에 고정해 두면, 일하다가 눈길만 돌려도 마음이 다잡아져요.</p>
+            <p class="aside">팁: 프로필 사진을 숨기면 좁은 창에서도 글자 칸이 시원하게 넓어져요!</p>
+            <div class="desk inline">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="../img/ko/desk-narrow.jpg" alt="컴퓨터 화면 한쪽에 좁게 띄운 Solche 창" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+          </article>
+          <article data-scene="1">
+            <small>평범한 일상에서</small>
+            <h3>남 보여 주기엔 사소하지만 내겐 소중한 순간</h3>
+            <p>산책길 풍경, 동네 빵집, 라떼 한 잔까지. 글마다 사진을 10장까지 넉넉히 붙여 나만의 일상 피드를 채워 보세요. ‘좋아요’ 받을 일이 없으니 대충 찍은 사진도 정겨워요.</p>
+            <div class="phone inline"><img src="../img/ko/photos.jpg" alt="사진 세 장이 붙은 글" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="2">
+            <small>생각이 꼬리를 물 때</small>
+            <h3>어제의 나에게 오늘의 내가 답글 달기</h3>
+            <p>문득 떠오른 아이디어에 답글을 달며 생각을 이어 가 보세요. 원래 글을 고쳐 쓰지 않아도 내 생각이 어떻게 자라났는지 흐름이 고스란히 남거든요.</p>
+            <div class="phone inline"><img src="../img/ko/thread.jpg" alt="내 글에 이어 단 답글들" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="3">
+            <small>깊어 가는 밤에</small>
+            <h3>누구에게도 못 할 말을 털어놓는 피난처</h3>
+            <p>오직 나만 보는 곳이니 단어를 고르거나 꾸밀 필요가 없어요. 불 끈 방 안에서는 편안한 다크 모드로 바꾸고, 마음에 담아 둔 말을 있는 그대로 꺼내 보세요.</p>
+            <div class="phone inline"><img src="../img/ko/tl-dark.jpg" alt="다크 모드 타임라인" width="900" height="1957" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h2>심플하지만,<br>쓰다 보면 꼭 필요한 기능은 다 챙겼어요</h2>
+      </div>
+      <ul class="brief">
+        <li><b>나에게 답글</b>혼잣말도 스레드처럼 줄줄이 이어 가요.</li>
+        <li><b>사진 최대 10장</b>한 글에 여러 장 올려도 타임라인에서 바로 봐요.</li>
+        <li><b>빠른 검색</b>언제 썼더라 싶은 글도 단어 하나로 찾아요.</li>
+        <li><b>맨 위에 고정</b>잊고 싶지 않은 다짐은 늘 눈닿는 맨 위에.</li>
+        <li><b>폴더 정리</b>섞이기 싫은 주제는 폴더별로 깔끔하게 나눠요.</li>
+        <li><b>내 취향대로</b>다크 모드부터 글자 크기, 배경색까지 내 눈에 맞게.</li>
+        <li><b>안전한 백업</b>기기를 바꿀 땐 파일 하나로 통째로 옮겨요.</li>
+        <li><b>11개 언어</b>한국어, English, 日本語 등 11개 언어를 지원해요.</li>
+        <li><b>완벽한 오프라인</b>인터넷 연결 없이 언제 어디서나 바로 열려요.</li>
+      </ul>
+      <p class="more"><a class="btn" href="guide/">모든 기능 자세히 구경하기</a></p>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <div class="wrap narrow">
+      <div class="ideas">
+        <h3>혼자 조용히 구상 중인 것들</h3>
+        <p>앞으로 이런 것도 넣어 보면 재밌겠다 싶은 제 작은 메모장이에요. 아직 앱에 들어간 기능은 아니고, 꼭 만든다는 약속도 아니지만 살짝 공유해 봐요!</p>
+        <ul>
+          <li><b>여러 명의 나:</b> 한 타임라인 안에서 프로필을 여러 개 쓰는 거예요. 내 글에 내 최애 캐릭터 프로필로 답글을 달아 주면 꽤 든든하겠죠?</li>
+          <li><b>내 방처럼 꾸미기:</b> 배경 사진이나 테마를 더 자유롭게 바꿔서, 진짜 내 비밀 방처럼 꾸미는 기능이에요.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="panel">
+        <h2>비공개는 단순한 옵션이 아니라,<br>Solche가 태어난 방식 그 자체입니다.</h2>
+        <p class="sub">비공개 계정이라도 글이 남의 서버에 저장된다면 온전한 비밀이 아니니까요. Solche는 아예 서버 없이 작동하도록 설계했습니다.</p>
+        <div class="four">
+          <div><b>계정 없음</b><span>회원가입도, 로그인도, 이메일 입력도 묻지 않습니다.</span></div>
+          <div><b>서버 없음</b><span>모든 글과 사진은 오직 내 기기 내부에만 저장됩니다.</span></div>
+          <div><b>인터넷 연결 없음</b><span>앱이 인터넷에 아예 연결하지 않으니, 밖으로 새어 나갈 통로 자체가 없습니다.</span></div>
+          <div><b>내 손안의 백업</b><span>클라우드 대신 내가 직접 파일로 뽑아 원하는 곳에 안전하게 보관합니다.</span></div>
+        </div>
+        <p class="site-note">지금 보고 계신 이 홈페이지도 방문자를 전혀 추적하지 않습니다. 쿠키도, 분석 도구도, 외부 글꼴조차 쓰지 않았거든요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="head">
+        <h2>지금 Solche 시작하기</h2>
+        <p>무료 · 광고 없음 · 회원가입 없음</p>
+      </div>
+      <div class="plats">
+        <div>
+          <b>iPhone · iPad · Mac</b><span>지금 App Store에서 바로 만나보실 수 있어요.</span>
+          <a class="btn small" href="https://apps.apple.com/app/solche/id6758111055">App Store에서 받기</a>
+        </div>
+        <div>
+          <b>Android</b><span>비공개 테스트를 진행하고 있어요! 그룹에 가입하시면 바로 설치해 보실 수 있습니다.</span>
+          <a href="https://groups.google.com/g/solche-testers">1. 테스터 그룹 가입</a>
+          <a href="https://play.google.com/apps/testing/com.firststarhana.solche">2. Google Play에서 설치</a>
+        </div>
+        <div>
+          <b>Windows</b><span>지금 Microsoft Store에서 바로 받으실 수 있어요.</span>
+          <a class="btn small" href="https://apps.microsoft.com/detail/9P13CN23QGMH">Microsoft Store에서 받기</a>
+        </div>
+        <div><b>Linux</b><span>Snap Store 정식 출시를 열심히 준비하고 있어요.</span><em>출시 준비 중</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="maker">
+    <div class="wrap">
+      <div class="head">
+        <h2>1인 개발자가 정성껏 만들고 있어요</h2>
+        <p>Solche는 Stardream이라는 이름으로 혼자 기획하고 개발하는 앱입니다. 지금은 광고도 앱 내 결제도 없어요.</p>
+      </div>
+      <div class="maker">
+        <div>
+          <b>개발자한테 맛있는 거 사주기</b>
+          <span>앱이 마음에 드셨다면 작은 응원을 보내 주세요. Solche를 오래오래 다듬어 나가는 데 정말 큰 힘이 됩니다!</span>
+          <a class="btn small" href="https://ko-fi.com/stardream_software">후원하기</a>
+        </div>
+        <div>
+          <b>함께 일하기 · 문의</b>
+          <span>채용 제안이나 외주 프로젝트 의뢰도 언제든 반갑게 기다립니다.</span>
+          <a class="btn small" data-u="siawh28" data-d="naver.com" href="#maker">메일 보내기</a>
+          <small class="mail-addr" data-u="siawh28" data-d="naver.com" data-show></small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stardream</span>
+    <span class="links">
+      <a href="https://ko-fi.com/post/Privacy-Policy-for-Solche-X1Q321Q5OX">개인정보처리방침</a>
+      <a data-u="siawh28" data-d="naver.com" href="#maker">문의</a>
+    </span>
+    <p class="credit">앱 화면 속 사진: <a href="https://unsplash.com">Unsplash</a>의 Zoë Gayah Jonker, Alexander Naglestad, Rachelle O'Brien, Suhyeon Choi, Ramiro Pianarosa, Stephan Widua, Yeh Xintong, Sean Oulashin, Maddi Bazzocco, Mateusz Feliksik, E I, Zac Ong</p>
+  </div>
+</footer>
+
+<script>window.SOLCHE={"me": "나", "now": "방금 전", "pin": "고정", "pinned": "고정됨", "reply": "답글", "replyPh": "답글을 입력하세요", "replyLabel": "답글 입력", "save": "저장", "del": "삭제", "screen": " 화면", "sample": "어떤 날은 그냥 적어 두고 털어 버리는 게 필요해요. 답글도 달아 보세요.", "focus": [[21.5, 16.7], [24.5, 40.0], [22.4, 33.7], null]};</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solche 機能ガイド</title>
+<meta name="description" content="Solcheのすべての機能を、実際の画面といっしょに説明します。">
+<link rel="canonical" href="https://stardream-solche.github.io/ja/guide/">
+<link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/guide/">
+<link rel="alternate" hreflang="ko" href="https://stardream-solche.github.io/ko/guide/">
+<link rel="alternate" hreflang="ja" href="https://stardream-solche.github.io/ja/guide/">
+<link rel="alternate" hreflang="x-default" href="https://stardream-solche.github.io/guide/">
+<link rel="icon" href="../../favicon.png">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="guide">
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="wrap nav">
+  <a class="brand" href="../"><img src="../../img/icon.png" alt=""> Solche</a>
+  <nav>
+    <a href="../">紹介</a>
+    <a class="nav-g" href="https://ko-fi.com/stardream_software">支援する</a>
+    <details class="lang"><summary aria-label="Language">日本語</summary><div><a href="../../guide/" data-lang="en" lang="en">English</a><a href="../../ko/guide/" data-lang="ko" lang="ko">한국어</a><a href="../../ja/guide/" data-lang="ja" lang="ja" aria-current="true">日本語</a></div></details>
+    <a class="btn small" href="../#download">ダウンロード</a>
+  </nav>
+</header>
+
+<main>
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h1>Solche 機能ガイド</h1>
+        <p>気になる項目を押すと、くわしい説明と実際のアプリ画面が見られます。スクリーンショットはiPhoneのものですが、ほかの端末でも同じように使えます。</p>
+      </div>
+      <div class="feat">
+        <div class="feat-list">
+          <h3>書く</h3>
+          <details name="feat" open data-img="tl-light">
+            <summary>投稿する</summary>
+            <div class="body">
+              <p>画面の一番上にある<b>メモを入力してください</b>の欄に書いて、右上の<b>保存</b>を押すと、タイムラインの一番上にぽんと載ります。Enterで入れた改行もそのままきれいに残ります。</p>
+              <p>投稿ごとに、いつ書いたかの時間もいっしょに表示されます。書いたばかりの投稿は「たった今」「5分前」のように親しみやすく、数日たった投稿は「昨日」「金曜日」のようにひと目でわかるように表示します。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="photos">
+            <summary>写真を付ける</summary>
+            <div class="body">
+              <p>上部バーの写真アイコンを押して、写真を選んでみてください。一つの投稿に最大10枚まで入ります。文章なしで写真だけ載せても、ひとことを添えて残してもOKです。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="photos2">
+            <summary>昔の投稿を振り返る</summary>
+            <div class="body">
+              <p>下へスクロールしていくと、昔書いた投稿が途切れることなく、するすると続けて読み込まれます。</p>
+            </div>
+          </details>
+
+          <h3>投稿を扱う</h3>
+          <details name="feat" data-img="reply">
+            <summary>返信する</summary>
+            <div class="body">
+              <p>投稿の右側にある返信アイコン（曲がった矢印）を押すと、元の投稿を見ながら、そのすぐ下に考えを書き足せます。最初に書いた考えを続けたり、あとから後日談を残したりするのにぴったりです。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="thread">
+            <summary>スレッドで見る</summary>
+            <div class="body">
+              <p>返信は元の投稿の下に縦線でまとめて表示されるので、考えがどう流れていったのかがひと目で読めます。もちろん、返信にさらに返信を付けることもできます！</p>
+            </div>
+          </details>
+          <details name="feat" data-img="tl-flower">
+            <summary>一番上に固定する</summary>
+            <div class="body">
+              <p>画びょうの形のボタンを押すと、その投稿がタイムラインの一番上に固定されます。もう一度押せば、いつでも固定を解除できます。</p>
+              <p>固定した投稿がいくつもあるときは、好きな順番に並べ替えられます。スマホでは投稿を長押ししてドラッグ、パソコンではマウスでそのままドラッグすればOKです。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="edit">
+            <summary>編集、コピー、削除</summary>
+            <div class="body">
+              <p>それぞれの投稿の右上に並んだ小さなボタンを使ってみてください。鉛筆は編集、重なった四角はテキストのコピー、ごみ箱は削除です。うっかり消してしまわないよう、削除のときはもう一度確認します。</p>
+            </div>
+          </details>
+
+          <h3>写真を見る</h3>
+          <details name="feat" data-img="viewer">
+            <summary>写真を大きく見る</summary>
+            <div class="body">
+              <p>タイムラインに載せた写真をタップすると、画面いっぱいに大きく開きます。二本の指で拡大してじっくり見たり、横にスワイプして同じ投稿の写真を順番に眺めたりしてみてください。</p>
+              <p>パソコンではキーボードの矢印キー（<kbd>←</kbd> <kbd>→</kbd>）で写真を送り、<kbd>Esc</kbd>キーひとつですぐに閉じられます。</p>
+            </div>
+          </details>
+
+          <h3>探すと整理</h3>
+          <details name="feat" data-img="search">
+            <summary>検索</summary>
+            <div class="body">
+              <p>上部の虫めがねボタンを押して、覚えている単語を入力してみてください。その単語を含む投稿だけを選んで表示し、Xを押すと元のタイムラインに戻ります。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="drawer">
+            <summary>メニューとフォルダ</summary>
+            <div class="body">
+              <p>左上の<b>メニュー（≡）</b>を開くと、自分で作ったフォルダの一覧と、それぞれに入っている投稿の数がひと目でわかります。フォルダを押すとすぐにそのフォルダのタイムラインに移動し、新しく書く投稿もそのフォルダにたまっていきます。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="folders">
+            <summary>フォルダの作成と管理</summary>
+            <div class="body">
+              <p><b>フォルダ作成</b>で新しい部屋を作り、<b>フォルダ管理</b>でいつでも名前を変えたり整理したりできます。</p>
+              <p>もしフォルダを削除しても、その中にあった大切な投稿は消えずに、基本フォルダへ安全に移動するのでご安心ください。（基本フォルダそのものは削除できません。）</p>
+            </div>
+          </details>
+
+          <h3>プロフィール</h3>
+          <details name="feat" data-img="profile">
+            <summary>プロフィール写真と名前</summary>
+            <div class="body">
+              <p><b>メニュー → プロフィール編集</b>で、お気に入りのプロフィール写真と名前を設定してみてください。タイムラインのすべての投稿に、自分のプロフィールがいっしょに表示されます。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="noprofile">
+            <summary>プロフィールを隠す</summary>
+            <div class="body">
+              <p><b>プロフィールアイコンの表示</b>のスイッチをオフにすると、丸いプロフィール部分が消えて、本文のスペースがぐっと広くなります。デスクトップでウィンドウを細くして使うときに、特におすすめの設定です！</p>
+            </div>
+          </details>
+
+          <h3>カスタマイズ</h3>
+          <details name="feat" data-img="settings">
+            <summary>設定画面</summary>
+            <div class="body">
+              <p>上部の歯車アイコンか、<b>メニュー → 設定</b>から入ると、文字サイズ、ダークモード、言語、背景色を好みに合わせて変えられ、データのバックアップ・復元もできます。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="tl-dark">
+            <summary>ダークモード</summary>
+            <div class="body">
+              <p>上部バーの月の形のボタンを押すと落ち着いたダークモードに、太陽の形のボタンを押すと明るい昼の画面にすぐ切り替わります。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="fontsize">
+            <summary>文字サイズと行間</summary>
+            <div class="body">
+              <p><b>文字サイズの調整</b>でスライダーを左右に動かして、いちばん読みやすい大きさを探してみてください。プレビューの文章で、すぐに雰囲気を確認できます。</p>
+              <p>行間も<b>狭く</b>・<b>標準</b>・<b>広く</b>の3段階から選べます。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="bgcolor">
+            <summary>背景色</summary>
+            <div class="body">
+              <p><b>背景色の調整</b>で、好きな色合いを直接選ぶか、R・G・Bの数値を入力してみてください。選んだ背景のトーンに合わせて、ボタンや名前の色も調和するように変わります。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="language">
+            <summary>11言語</summary>
+            <div class="body">
+              <p>初めて起動すると端末の言語に自動で合わせ、設定の<b>言語の選択</b>で11言語の中からいつでも好きな言語に変えられます。</p>
+              <p>English, 한국어, 日本語, 简体中文, 繁體中文, Español, Português, Français, Deutsch, Bahasa Indonesia, Русский</p>
+            </div>
+          </details>
+
+          <h3>バックアップと復元</h3>
+          <details name="feat" data-img="settings">
+            <summary>データのバックアップ</summary>
+            <div class="body">
+              <p><b>設定 → データのバックアップ</b>を押すと、これまでに書いたすべての投稿、写真、フォルダ、設定がひとつのファイルにまとめて保存されます。保存場所も自分で選べます。アプリを削除したり機種変更したりする前に、忘れずにバックアップしてください！</p>
+            </div>
+          </details>
+          <details name="feat" data-img="settings">
+            <summary>データの復元</summary>
+            <div class="body">
+              <p><b>設定 → データの復元</b>で、保管しておいたバックアップファイルを選ぶと、そのときのタイムラインと設定にそのまま戻ります。いま端末にある内容はバックアップファイルの内容で上書きされるので、今の投稿も残したい場合は、復元の前に先にバックアップしておいてください。</p>
+              <p>もし正しいSolcheのバックアップファイルでなければ、自動で復元を中止し、今のデータを安全に守ります。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="settings">
+            <summary>最後の復元を元に戻す</summary>
+            <div class="body">
+              <p>復元を終えた直後は、設定画面に<b>最後の復元を元に戻す</b>ボタンが表示されます。もし古いバックアップファイルを間違えて選んでしまっても、慌てずに復元直前の状態へすぐ戻せます。</p>
+            </div>
+          </details>
+          <details name="feat" data-img="about">
+            <summary>新しい端末に移す</summary>
+            <div class="body">
+              <p>使っていた端末でバックアップファイルを作ったあと、メールやクラウドドライブ、USBなど好きな方法で新しい端末にファイルを移し、復元を押すだけで引っ越し完了です。</p>
+              <p>端末のどの場所にデータが保存されているかは、<b>メニュー → このアプリについて</b>でそのまま確認できます。</p>
+            </div>
+          </details>
+        </div>
+        <div class="feat-slot" id="feat-slot">
+          <div class="phone" id="feat-phone"><img id="feat-img" src="../../img/ja/tl-light.jpg" alt="Solcheの画面" width="900" height="1957"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap narrow">
+      <div class="head">
+        <h2>よくある質問</h2>
+      </div>
+      <div class="feat-list">
+        <details name="faq">
+          <summary>インターネットがつながらない場所でも使えますか？</summary>
+          <div class="body"><p>もちろんです！Solcheはインターネットに一切接続しないアプリなので、飛行機の中や電波の届かない場所でも、いつもと同じように快適に使えます。</p></div>
+        </details>
+        <details name="faq">
+          <summary>自分の投稿は誰が見られますか？</summary>
+          <div class="body"><p>見られるのは自分だけです。すべての投稿と写真は自分の端末の中だけに保存され、外部のサーバーに送信されることは決してありません。アカウントそのものがないので、パスワードが漏れる心配もありません。</p></div>
+        </details>
+        <details name="faq">
+          <summary>スマホとパソコンは自動で同期されますか？</summary>
+          <div class="body"><p>いいえ。サーバーを置かない仕組みなので、端末間の自動同期には対応していません。その代わり、端末を移すときはバックアップファイルひとつで、写真や設定まで丸ごと移せます。</p></div>
+        </details>
+        <details name="faq">
+          <summary>アプリを削除すると投稿も消えますか？</summary>
+          <div class="body"><p>はい。すべてのデータはサーバーではなくアプリの中だけに保存されるため、アプリを削除すると投稿もいっしょに消えます。アプリを削除したり機種変更したりするときは、必ず先にバックアップファイルを作っておいてください！</p></div>
+        </details>
+        <details name="faq">
+          <summary>無料ですか？</summary>
+          <div class="body"><p>はい！最初から最後まで無料で、読む流れを邪魔する広告も一切ありません。</p></div>
+        </details>
+        <details name="faq">
+          <summary>使っていてバグを見つけました／提案したいアイデアがあります！</summary>
+          <div class="body"><p>いつでも大歓迎です！<a href="https://ko-fi.com/stardream_software">Ko-fiページ</a>からお気軽にお知らせください。</p></div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stardream</span>
+    <span class="links">
+      <a href="https://ko-fi.com/post/Privacy-Policy-for-Solche-X1Q321Q5OX">プライバシーポリシー</a>
+      <a data-u="siawh28" data-d="naver.com" href="../#maker">お問い合わせ</a>
+    </span>
+    <p class="credit">アプリ画面内の写真：<a href="https://unsplash.com">Unsplash</a>の Zoë Gayah Jonker, Alexander Naglestad, Rachelle O'Brien, Suhyeon Choi, Ramiro Pianarosa, Stephan Widua, Yeh Xintong, Sean Oulashin, Maddi Bazzocco, Mateusz Feliksik, E I, Zac Ong</p>
+  </div>
+</footer>
+
+<script>window.SOLCHE={"me": "自分", "now": "たった今", "pin": "固定", "pinned": "固定中", "reply": "返信", "replyPh": "返信を入力してください", "replyLabel": "返信入力", "save": "保存", "del": "削除", "screen": "の画面", "sample": "ただ書き出して、すっきり手放したい日もありますよね。返信も付けてみてください。", "focus": [[21.5, 16.3], [21.5, 39.8], [21.7, 36.0], null]};</script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

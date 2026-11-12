@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solche 기능 가이드</title>
+<meta name="description" content="Solche의 모든 기능을 실제 화면과 함께 설명해요.">
+<link rel="canonical" href="https://stardream-solche.github.io/ko/guide/">
+<link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/guide/">
+<link rel="alternate" hreflang="ko" href="https://stardream-solche.github.io/ko/guide/">
+<link rel="alternate" hreflang="ja" href="https://stardream-solche.github.io/ja/guide/">
+<link rel="alternate" hreflang="x-default" href="https://stardream-solche.github.io/guide/">
+<link rel="icon" href="../../favicon.png">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="guide">
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="wrap nav">
+  <a class="brand" href="../"><img src="../../img/icon.png" alt=""> Solche</a>
+  <nav>
+    <a href="../">소개</a>
+    <a class="nav-g" href="https://ko-fi.com/stardream_software">후원하기</a>
+    <details class="lang"><summary aria-label="Language">한국어</summary><div><a href="../../guide/" data-lang="en" lang="en">English</a><a href="../../ko/guide/" data-lang="ko" lang="ko" aria-current="true">한국어</a><a href="../../ja/guide/" data-lang="ja" lang="ja">日本語</a></div></details>
+    <a class="btn small" href="../#download">다운로드</a>
+  </nav>
+</header>
+
+<main>
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h1>Solche 기능 가이드</h1>
+        <p>궁금한 항목을 누르면 자세한 설명과 실제 앱 화면을 볼 수 있어요. 스크린샷은 iPhone 기준이지만 다른 기기에서도 똑같이 쓸 수 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-list">
+          <h3>글쓰기</h3>
+          <details name="feat" open data-img="tl-light">
+            <summary>글 올리기</summary>
+            <div class="body">
+              <p>화면 맨 위의 <b>메모를 입력하세요</b> 칸에 글을 적고 오른쪽 위 <b>저장</b>을 누르면 타임라인 맨 위에 톡 올라갑니다. 엔터로 나눈 줄바꿈도 그대로 예쁘게 남아요.</p>
+              <p>글마다 언제 적었는지 시간이 함께 찍혀요. 방금 적은 글은 "방금 전", "5분 전"처럼 친근하게, 며칠 지난 글은 "어제", "금요일"처럼 한눈에 들어오게 보여 줍니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="photos">
+            <summary>사진 붙이기</summary>
+            <div class="body">
+              <p>상단 바의 사진 아이콘을 눌러 사진을 골라 보세요. 글 하나에 최대 10장까지 거뜬히 들어갑니다. 글 없이 사진만 툭 올려도 좋고, 이야기와 함께 남겨도 좋아요.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="photos2">
+            <summary>예전 글 돌아보기</summary>
+            <div class="body">
+              <p>스크롤을 쭉 내리면 예전에 적었던 글들이 끊김 없이 스르륵 이어서 불러와집니다.</p>
+            </div>
+          </details>
+
+          <h3>글 다루기</h3>
+          <details name="feat" data-img="reply">
+            <summary>답글 달기</summary>
+            <div class="body">
+              <p>글 오른쪽의 답글 아이콘(굽은 화살표)을 누르면 원본 글을 보면서 바로 밑에 생각을 덧붙일 수 있어요. 처음 적은 생각을 이어 가거나 나중에 후기를 남길 때 딱이에요.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="thread">
+            <summary>스레드로 보기</summary>
+            <div class="body">
+              <p>답글은 원래 글 아래에 세로선으로 나란히 묶여서, 생각이 어떻게 흘러갔는지 한눈에 읽힙니다. 물론 답글에 또 답글을 달 수도 있어요!</p>
+            </div>
+          </details>
+          <details name="feat" data-img="tl-flower">
+            <summary>맨 위에 고정하기</summary>
+            <div class="body">
+              <p>압정 모양 버튼을 콕 누르면 해당 글이 타임라인 꼭대기에 고정됩니다. 다시 한 번 누르면 언제든 고정이 풀려요.</p>
+              <p>고정해 둔 글이 여러 개라면 원하는 순서로 줄을 세울 수도 있어요. 휴대폰에선 글을 꾹 눌러서 끌고, 컴퓨터에선 마우스로 바로 끌어다 놓으면 됩니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="edit">
+            <summary>수정, 복사, 삭제</summary>
+            <div class="body">
+              <p>각 글 오른쪽 위에 나란히 있는 작은 버튼들을 써 보세요. 연필은 수정, 겹친 네모는 텍스트 복사, 휴지통은 삭제입니다. 실수로 지우지 않도록 삭제할 땐 한 번 더 물어봐요.</p>
+            </div>
+          </details>
+
+          <h3>사진 보기</h3>
+          <details name="feat" data-img="viewer">
+            <summary>사진 크게 보기</summary>
+            <div class="body">
+              <p>타임라인에 올린 사진을 터치하면 화면 가득 시원하게 열려요. 두 손가락으로 확대해 자세히 보거나, 옆으로 넘겨 가며 같은 글에 묶인 사진들을 감상해 보세요.</p>
+              <p>컴퓨터에서는 키보드 방향키(<kbd>←</kbd> <kbd>→</kbd>)로 편하게 사진을 넘기고, <kbd>Esc</kbd> 키 하나로 바로 닫을 수 있습니다.</p>
+            </div>
+          </details>
+
+          <h3>찾기와 정리</h3>
+          <details name="feat" data-img="search">
+            <summary>검색</summary>
+            <div class="body">
+              <p>상단 돋보기 버튼을 누르고 기억나는 단어를 쳐 보세요. 그 단어가 담긴 글만 쏙 골라 보여 주고, X를 누르면 원래 타임라인으로 돌아옵니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="drawer">
+            <summary>메뉴와 폴더</summary>
+            <div class="body">
+              <p>왼쪽 위 <b>메뉴(≡)</b>를 열면 내가 만든 폴더 목록과 각 폴더에 담긴 글 개수가 한눈에 보여요. 원하는 폴더를 누르면 바로 그 폴더의 타임라인으로 이동하고, 새로 쓰는 글도 그 폴더에 착착 쌓입니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="folders">
+            <summary>폴더 만들기와 관리</summary>
+            <div class="body">
+              <p><b>폴더 생성</b>으로 새 방을 만들고, <b>폴더 관리</b>에서 언제든 이름을 고치거나 정리할 수 있어요.</p>
+              <p>혹시 폴더를 지우더라도 그 안에 있던 소중한 글들은 날아가지 않고 기본 폴더로 안전하게 이사하니 걱정 마세요. (기본 폴더 자체는 지워지지 않아요.)</p>
+            </div>
+          </details>
+
+          <h3>프로필</h3>
+          <details name="feat" data-img="profile">
+            <summary>프로필 사진과 이름</summary>
+            <div class="body">
+              <p><b>메뉴 → 프로필 수정</b>에서 내 마음에 드는 프로필 사진과 이름을 설정해 보세요. 타임라인의 모든 글에 내 프로필이 귀엽게 함께 표시됩니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="noprofile">
+            <summary>프로필 숨기기</summary>
+            <div class="body">
+              <p><b>프로필 아이콘 표시</b> 스위치를 끄면 동그란 프로필 영역이 사라지면서 본문 영역이 훨씬 넓어져요. 데스크톱에서 창을 좁게 띄워 놓고 쓸 때 특히 추천하는 설정입니다!</p>
+            </div>
+          </details>
+
+          <h3>꾸미기</h3>
+          <details name="feat" data-img="settings">
+            <summary>설정 화면</summary>
+            <div class="body">
+              <p>상단 톱니바퀴 아이콘이나 <b>메뉴 → 설정</b>으로 들어가면 글자 크기, 다크 모드, 언어, 배경색을 내 취향대로 바꾸고 데이터 백업·복구까지 챙길 수 있습니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="tl-dark">
+            <summary>다크 모드</summary>
+            <div class="body">
+              <p>상단 막대의 달 모양 버튼을 누르면 차분한 다크 모드로, 해 모양 버튼을 누르면 다시 환한 낮 화면으로 즉시 바뀝니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="fontsize">
+            <summary>글자 크기와 줄 간격</summary>
+            <div class="body">
+              <p><b>글자 크기 조절</b>에서 슬라이더를 좌우로 밀어 내 눈에 가장 편안한 크기를 찾아보세요. 미리보기 문장으로 느낌을 즉시 확인할 수 있어요.</p>
+              <p>줄 간격도 <b>좁게</b>, <b>보통</b>, <b>넓게</b> 세 단계 중에서 고를 수 있어요.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="bgcolor">
+            <summary>배경색</summary>
+            <div class="body">
+              <p><b>배경색 조절</b>에서 마음에 드는 색감을 직접 찍거나 R·G·B 숫자를 입력해 보세요. 내가 고른 배경 톤에 맞춰 버튼과 이름 색상까지 조화롭게 맞춰집니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="language">
+            <summary>11개 언어</summary>
+            <div class="body">
+              <p>처음 실행하면 기기 언어를 알아서 따라가고, 설정의 <b>언어 선택</b>에서 11개 언어 중 원하는 언어로 언제든 바꿀 수 있어요.</p>
+              <p>English, 한국어, 日本語, 简体中文, 繁體中文, Español, Português, Français, Deutsch, Bahasa Indonesia, Русский</p>
+            </div>
+          </details>
+
+          <h3>백업과 복구</h3>
+          <details name="feat" data-img="settings">
+            <summary>데이터 백업</summary>
+            <div class="body">
+              <p><b>설정 → 데이터 백업</b>을 누르면 지금까지 쓴 모든 글, 사진, 폴더, 설정값이 파일 하나로 깔끔하게 묶여 저장됩니다. 저장할 위치도 직접 고를 수 있어요. 앱을 지우거나 기기를 바꾸기 전엔 잊지 말고 꼭 백업해 주세요!</p>
+            </div>
+          </details>
+          <details name="feat" data-img="settings">
+            <summary>데이터 복구</summary>
+            <div class="body">
+              <p><b>설정 → 데이터 복구</b>에서 보관해 둔 백업 파일을 선택하면 그 시절의 타임라인과 설정으로 그대로 돌아갑니다. 현재 기기에 있던 내용은 백업 파일 내용으로 덮어써지니, 지금 글도 남기고 싶다면 복구 전에 먼저 백업해 두세요.</p>
+              <p>만약 정상적인 Solche 백업 파일이 아니면 알아서 복구를 멈추고 기존 데이터를 안전하게 지킵니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="settings">
+            <summary>마지막 복원 되돌리기</summary>
+            <div class="body">
+              <p>복구를 마친 직후에는 설정 화면에 <b>마지막 복원 되돌리기</b> 버튼이 생겨요. 혹시 옛날 백업 파일을 잘못 골랐더라도 당황하지 않고 복구 직전 상태로 단숨에 되돌릴 수 있습니다.</p>
+            </div>
+          </details>
+          <details name="feat" data-img="about">
+            <summary>새 기기로 옮기기</summary>
+            <div class="body">
+              <p>쓰던 기기에서 백업 파일을 만든 뒤, 메일이나 클라우드 드라이브, USB 등 편한 방법으로 새 기기에 파일을 옮겨서 복구만 누르면 이사 끝입니다.</p>
+              <p>내 기기 속 어느 경로에 데이터가 저장되고 있는지는 <b>메뉴 → 이 앱에 관하여</b>에서 투명하게 확인하실 수 있어요.</p>
+            </div>
+          </details>
+        </div>
+        <div class="feat-slot" id="feat-slot">
+          <div class="phone" id="feat-phone"><img id="feat-img" src="../../img/ko/tl-light.jpg" alt="Solche 화면" width="900" height="1957"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap narrow">
+      <div class="head">
+        <h2>자주 묻는 질문</h2>
+      </div>
+      <div class="feat-list">
+        <details name="faq">
+          <summary>인터넷이 안 되는 곳에서도 쓸 수 있나요?</summary>
+          <div class="body"><p>물론이죠! Solche는 인터넷에 아예 연결하지 않는 앱이라 비행기 안이나 데이터가 끊긴 곳에서도 평소와 똑같이 쾌적하게 쓸 수 있습니다.</p></div>
+        </details>
+        <details name="faq">
+          <summary>내 글을 누가 볼 수 있나요?</summary>
+          <div class="body"><p>오직 나 혼자만 볼 수 있습니다. 모든 글과 사진은 내 기기 안에만 저장되고 외부 서버로 전송되는 일이 절대 없거든요. 계정 자체가 없으니 비밀번호가 털릴 걱정도 없습니다.</p></div>
+        </details>
+        <details name="faq">
+          <summary>휴대폰과 컴퓨터가 자동으로 동기화되나요?</summary>
+          <div class="body"><p>아니요, 서버를 두지 않는 구조라 기기 간 자동 동기화는 지원하지 않습니다. 대신 기기를 옮기실 때는 백업 파일 하나로 사진과 설정까지 통째로 옮기실 수 있어요.</p></div>
+        </details>
+        <details name="faq">
+          <summary>앱을 지우면 글도 사라지나요?</summary>
+          <div class="body"><p>네, 모든 데이터가 서버가 아닌 앱 내부에만 저장되기 때문에 앱을 삭제하면 글도 함께 지워집니다. 앱을 지우거나 폰을 바꾸실 땐 꼭 먼저 백업 파일을 만들어 두세요!</p></div>
+        </details>
+        <details name="faq">
+          <summary>무료인가요?</summary>
+          <div class="body"><p>네! 처음부터 끝까지 무료이고, 글을 읽는 흐름을 방해하는 광고도 일절 없습니다.</p></div>
+        </details>
+        <details name="faq">
+          <summary>쓰다가 버그를 발견했거나 건의하고 싶은 아이디어가 있어요!</summary>
+          <div class="body"><p>언제든 환영입니다! <a href="https://ko-fi.com/stardream_software">Ko-fi 페이지</a>를 통해 편하게 말씀해 주세요.</p></div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stardream</span>
+    <span class="links">
+      <a href="https://ko-fi.com/post/Privacy-Policy-for-Solche-X1Q321Q5OX">개인정보처리방침</a>
+      <a data-u="siawh28" data-d="naver.com" href="../#maker">문의</a>
+    </span>
+    <p class="credit">앱 화면 속 사진: <a href="https://unsplash.com">Unsplash</a>의 Zoë Gayah Jonker, Alexander Naglestad, Rachelle O'Brien, Suhyeon Choi, Ramiro Pianarosa, Stephan Widua, Yeh Xintong, Sean Oulashin, Maddi Bazzocco, Mateusz Feliksik, E I, Zac Ong</p>
+  </div>
+</footer>
+
+<script>window.SOLCHE={"me": "나", "now": "방금 전", "pin": "고정", "pinned": "고정됨", "reply": "답글", "replyPh": "답글을 입력하세요", "replyLabel": "답글 입력", "save": "저장", "del": "삭제", "screen": " 화면", "sample": "어떤 날은 그냥 적어 두고 털어 버리는 게 필요해요. 답글도 달아 보세요.", "focus": [[21.5, 16.7], [24.5, 40.0], [22.4, 33.7], null]};</script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

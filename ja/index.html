@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solche — 誰にも見せない、自分だけのSNS</title>
+<meta name="description" content="誰にも見せない、自分だけのSNS。アカウントもサーバーもなく、すべての記録は自分の端末の中だけに残ります。">
+<meta property="og:title" content="Solche — 誰にも見せない、自分だけのSNS">
+<meta property="og:description" content="アカウントもサーバーもなく、すべての記録は自分の端末の中だけに残ります。">
+<meta property="og:image" content="https://stardream-solche.github.io/img/ja/tl-light.jpg">
+<link rel="canonical" href="https://stardream-solche.github.io/ja/">
+<link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/">
+<link rel="alternate" hreflang="ko" href="https://stardream-solche.github.io/ko/">
+<link rel="alternate" hreflang="ja" href="https://stardream-solche.github.io/ja/">
+<link rel="alternate" hreflang="x-default" href="https://stardream-solche.github.io/">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="wrap nav">
+  <a class="brand" href="./"><img src="../img/icon.png" alt=""> Solche</a>
+  <nav>
+    <a class="nav-c" href="#why">どんなアプリ？</a>
+    <a href="guide/">機能を見る</a>
+    <a class="nav-b" href="#privacy">プライバシー</a>
+    <a class="nav-a" href="https://ko-fi.com/stardream_software">支援する</a>
+    <details class="lang"><summary aria-label="Language">日本語</summary><div><a href="../" data-lang="en" lang="en">English</a><a href="../ko/" data-lang="ko" lang="ko">한국어</a><a href="../ja/" data-lang="ja" lang="ja" aria-current="true">日本語</a></div></details>
+    <a class="btn small" href="#download">ダウンロード</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="stage">
+      <div class="win">
+        <div class="bar"><i></i><i></i><i></i><span>Solche</span></div>
+        <div class="shot"><img src="../img/ja/desktop.jpg" alt="デスクトップで見たSolcheのタイムライン" width="1800" height="1057"></div>
+      </div>
+      <div class="phone hero-phone" id="hero-phone">
+        <img class="day" src="../img/ja/tl-light.jpg" alt="スマホで見たSolcheのタイムライン" width="900" height="1957">
+        <img class="dark" src="../img/ja/tl-dark.jpg" alt="ダークモードで見たSolcheのタイムライン" width="900" height="1957">
+      </div>
+      <div class="mode" role="group" aria-label="スマホ画面の明るさ">
+        <button type="button" class="on" data-mode="day" aria-pressed="true">昼</button>
+        <button type="button" data-mode="dark" aria-pressed="false">夜</button>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>誰にも見せない<br><em>自分だけのSNS</em></h1>
+      <p class="lead">SNSに投稿するみたいに、気軽に書いてみてください。ふと浮かんだ考えも、日常の写真も、自分の投稿につけた返信も、すべて自分の端末の中だけに残ります。アカウントも、サーバーも、気をつかう相手もいません。</p>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/solche/id6758111055">App Storeで無料ダウンロード</a>
+        <span>iPhone · iPad · Mac · Windowsで公開中<br><a href="#download">Windows · Android · Linuxのご案内</a></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head">
+        <h2>白紙のメモ帳は一行目から手が止まるけれど、<br>タイムラインなら一行で十分だから</h2>
+      </div>
+      <div class="three">
+        <div class="say">
+          <small>普通のメモ帳</small>
+          <b>「タイトル、何にしよう？」</b>
+          <p>新しい文書を開くと、真っ白な余白がまずプレッシャーですよね。一、二行のひとりごとをファイルにするのも大げさで、結局ウィンドウを閉じてしまいます。</p>
+        </div>
+        <div class="say">
+          <small>SNSの鍵アカウント</small>
+          <b>「もし誰かに見られたらどうしよう？」</b>
+          <p>鍵をかけても、結局は誰かのサーバーに残る投稿ですから。本当の気持ちは、最後まで飲み込んでしまうんですよね。</p>
+        </div>
+        <div class="say solche">
+          <small>Solche</small>
+          <b>「思いついたまま、ぽんと。」</b>
+          <p>入力欄に書いて保存を押すだけ！新しい投稿が上に積み重なり、端末の外には一文字も出ていきません。</p>
+        </div>
+      </div>
+
+      <div class="try" aria-label="Solcheをここで試す">
+        <span class="tape"></span>
+        <div class="try-top">
+          <b>ここで一行書いてみてください</b>
+          <span>再読み込みするときれいに消えます。ここに書いた内容も、もちろんどこにも送信されません。</span>
+        </div>
+        <form id="try-form" class="try-form">
+          <span class="ava" aria-hidden="true"></span>
+          <input id="try-input" type="text" maxlength="200" placeholder="メモを入力してください" aria-label="メモ入力">
+          <button class="btn small" type="submit">保存</button>
+        </form>
+        <div id="try-feed"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenes">
+    <div class="wrap">
+      <div class="head">
+        <h2>タイムラインはひとつ、楽しみ方は自分しだい</h2>
+      </div>
+      <div class="scenes">
+        <div class="scene-phone is-desk">
+          <div class="phone" id="scene-phone">
+            <img src="../img/ja/tl-light.jpg" alt="" width="900" height="1957" class="on">
+            <img src="../img/ja/photos.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="../img/ja/thread.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="../img/ja/tl-dark.jpg" alt="" width="900" height="1957" loading="lazy">
+            <div class="focus" id="scene-focus"></div>
+          </div>
+          <div class="desk stage" id="scene-desk" aria-hidden="true">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="../img/ja/desk-narrow.jpg" alt="" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="scene-text">
+          <article data-scene="0" class="on">
+            <small>机の片すみで</small>
+            <h3>モニターの横に細く置いておく</h3>
+            <p>ウィンドウの幅を細くして、作業画面の横にそっと並べてみてください。今年の目標や好きな言葉を一番上に固定しておけば、仕事の合間にちらっと見るだけで気持ちが引き締まります。</p>
+            <p class="aside">ヒント：プロフィール写真を隠すと、細いウィンドウでも文字のスペースが広々します！</p>
+            <div class="desk inline">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="../img/ja/desk-narrow.jpg" alt="パソコン画面の端に細く表示したSolcheのウィンドウ" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+          </article>
+          <article data-scene="1">
+            <small>なにげない日常に</small>
+            <h3>人に見せるほどじゃないけれど、自分には大切な瞬間</h3>
+            <p>散歩道の景色、近所のパン屋さん、一杯のラテまで。投稿ごとに写真を10枚まで付けて、自分だけの日常フィードを作ってみてください。「いいね」をもらう必要がないから、適当に撮った写真も愛おしく見えます。</p>
+            <div class="phone inline"><img src="../img/ja/photos.jpg" alt="写真が3枚付いた投稿" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="2">
+            <small>考えが次々と浮かぶとき</small>
+            <h3>昨日の自分に、今日の自分が返信する</h3>
+            <p>ふと浮かんだアイデアに返信を付けて、考えをつなげてみてください。元の投稿を書き直さなくても、考えがどう育っていったのか、その流れがそのまま残ります。</p>
+            <div class="phone inline"><img src="../img/ja/thread.jpg" alt="自分の投稿に続けて付けた返信" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="3">
+            <small>夜が更けていくころ</small>
+            <h3>誰にも言えないことを打ち明けられる避難所</h3>
+            <p>自分しか見ない場所だから、言葉を選んだり飾ったりする必要はありません。明かりを消した部屋では落ち着いたダークモードに切り替えて、心にしまっていた言葉をそのまま書き出してみてください。</p>
+            <div class="phone inline"><img src="../img/ja/tl-dark.jpg" alt="ダークモードのタイムライン" width="900" height="1957" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h2>シンプルだけど、<br>使っているうちに欲しくなる機能はそろっています</h2>
+      </div>
+      <ul class="brief">
+        <li><b>自分に返信</b>ひとりごともスレッドのようにつなげられます。</li>
+        <li><b>写真は最大10枚</b>一つの投稿に何枚載せても、タイムラインですぐ見られます。</li>
+        <li><b>すばやい検索</b>いつ書いたか思い出せない投稿も、単語ひとつで見つかります。</li>
+        <li><b>一番上に固定</b>忘れたくない目標は、いつも目に入る一番上に。</li>
+        <li><b>フォルダ整理</b>混ぜたくないテーマはフォルダごとにすっきり分けられます。</li>
+        <li><b>自分好みに</b>ダークモードから文字サイズ、背景色まで、見やすいように。</li>
+        <li><b>安心のバックアップ</b>機種変更のときは、ファイルひとつで丸ごと移せます。</li>
+        <li><b>11言語</b>日本語、English、한국어など11言語に対応しています。</li>
+        <li><b>完全オフライン</b>インターネットにつながなくても、いつでもどこでもすぐ開けます。</li>
+      </ul>
+      <p class="more"><a class="btn" href="guide/">すべての機能をくわしく見る</a></p>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <div class="wrap narrow">
+      <div class="ideas">
+        <h3>ひとりでこっそり構想中のこと</h3>
+        <p>これから入れてみたら面白そうだな、と思っていることの小さなメモです。まだアプリに入っている機能ではなく、必ず作るという約束でもありませんが、少しだけ共有します！</p>
+        <ul>
+          <li><b>何人もの自分：</b>ひとつのタイムラインの中で、プロフィールをいくつも使う機能です。自分の投稿に推しキャラのプロフィールで返信が付いたら、けっこう心強いですよね？</li>
+          <li><b>自分の部屋のように飾る：</b>背景写真やテーマをもっと自由に変えて、本当に自分だけの秘密の部屋のように飾れる機能です。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="panel">
+        <h2>非公開は単なるオプションではなく、<br>Solcheが生まれたかたちそのものです。</h2>
+        <p class="sub">鍵アカウントでも、投稿が誰かのサーバーに保存されるなら、完全な秘密とは言えません。Solcheは最初からサーバーなしで動くように設計しました。</p>
+        <div class="four">
+          <div><b>アカウントなし</b><span>会員登録も、ログインも、メールアドレスの入力も求めません。</span></div>
+          <div><b>サーバーなし</b><span>すべての投稿と写真は、自分の端末の中だけに保存されます。</span></div>
+          <div><b>インターネット接続なし</b><span>アプリはインターネットに一切接続しないので、外に漏れる通り道そのものがありません。</span></div>
+          <div><b>バックアップは自分の手で</b><span>クラウドの代わりに、自分でファイルに書き出して好きな場所に安全に保管します。</span></div>
+        </div>
+        <p class="site-note">いまご覧のこのホームページも、訪問者を一切追跡しません。Cookieも、解析ツールも、外部フォントさえ使っていません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="head">
+        <h2>Solcheをはじめる</h2>
+        <p>無料 · 広告なし · 会員登録なし</p>
+      </div>
+      <div class="plats">
+        <div>
+          <b>iPhone · iPad · Mac</b><span>App Storeで今すぐダウンロードできます。</span>
+          <a class="btn small" href="https://apps.apple.com/app/solche/id6758111055">App Storeで入手</a>
+        </div>
+        <div>
+          <b>Android</b><span>クローズドテストを実施中です！グループに参加すると、すぐにインストールできます。</span>
+          <a href="https://groups.google.com/g/solche-testers">1. テスターグループに参加</a>
+          <a href="https://play.google.com/apps/testing/com.firststarhana.solche">2. Google Playでインストール</a>
+        </div>
+        <div>
+          <b>Windows</b><span>Microsoft Storeで今すぐ入手できます。</span>
+          <a class="btn small" href="https://apps.microsoft.com/detail/9P13CN23QGMH">Microsoft Storeで入手</a>
+        </div>
+        <div><b>Linux</b><span>Snap Storeでの正式公開に向けて準備を進めています。</span><em>公開準備中</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="maker">
+    <div class="wrap">
+      <div class="head">
+        <h2>個人開発者が心をこめて作っています</h2>
+        <p>Solcheは、Stardreamという名前でひとりで企画・開発しているアプリです。いまのところ広告もアプリ内課金もありません。</p>
+      </div>
+      <div class="maker">
+        <div>
+          <b>開発者においしいものをおごる</b>
+          <span>アプリを気に入っていただけたら、小さな応援をお願いします。Solcheを長く磨き続けていくための、本当に大きな力になります！</span>
+          <a class="btn small" href="https://ko-fi.com/stardream_software">支援する</a>
+        </div>
+        <div>
+          <b>お仕事のご相談 · お問い合わせ</b>
+          <span>採用のご提案や開発案件のご依頼も、いつでも歓迎です。</span>
+          <a class="btn small" data-u="siawh28" data-d="naver.com" href="#maker">メールを送る</a>
+          <small class="mail-addr" data-u="siawh28" data-d="naver.com" data-show></small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stardream</span>
+    <span class="links">
+      <a href="https://ko-fi.com/post/Privacy-Policy-for-Solche-X1Q321Q5OX">プライバシーポリシー</a>
+      <a data-u="siawh28" data-d="naver.com" href="#maker">お問い合わせ</a>
+    </span>
+    <p class="credit">アプリ画面内の写真：<a href="https://unsplash.com">Unsplash</a>の Zoë Gayah Jonker, Alexander Naglestad, Rachelle O'Brien, Suhyeon Choi, Ramiro Pianarosa, Stephan Widua, Yeh Xintong, Sean Oulashin, Maddi Bazzocco, Mateusz Feliksik, E I, Zac Ong</p>
+  </div>
+</footer>
+
+<script>window.SOLCHE={"me": "自分", "now": "たった今", "pin": "固定", "pinned": "固定中", "reply": "返信", "replyPh": "返信を入力してください", "replyLabel": "返信入力", "save": "保存", "del": "削除", "screen": "の画面", "sample": "ただ書き出して、すっきり手放したい日もありますよね。返信も付けてみてください。", "focus": [[21.5, 16.3], [21.5, 39.8], [21.7, 36.0], null]};</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

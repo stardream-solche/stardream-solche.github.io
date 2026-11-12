@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solche — Your private timeline</title>
+<meta name="description" content="A social-style timeline that only you can see. No account, no server. Everything you write stays on your device.">
+<meta property="og:title" content="Solche — Your private timeline">
+<meta property="og:description" content="No account, no server. Everything you write stays on your device.">
+<meta property="og:image" content="https://stardream-solche.github.io/img/en/tl-light.jpg">
+<link rel="canonical" href="https://stardream-solche.github.io/">
+<link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/">
+<link rel="alternate" hreflang="ko" href="https://stardream-solche.github.io/ko/">
+<link rel="alternate" hreflang="ja" href="https://stardream-solche.github.io/ja/">
+<link rel="alternate" hreflang="x-default" href="https://stardream-solche.github.io/">
+<script>(function(){try{var l=localStorage.getItem('solche-lang');if(!l){var a=navigator.languages||[navigator.language||''];for(var i=0;i<a.length;i++){var c=(a[i]||'').toLowerCase().slice(0,2);if(c==='ko'||c==='ja'||c==='en'){l=c;break}}}if(l==='ko'||l==='ja'){location.replace(''+l+'/'+location.hash)}}catch(e){}})();</script>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="wrap nav">
+  <a class="brand" href="./"><img src="img/icon.png" alt=""> Solche</a>
+  <nav>
+    <a class="nav-c" href="#why">Why Solche</a>
+    <a href="guide/">Features</a>
+    <a class="nav-b" href="#privacy">Privacy</a>
+    <a class="nav-a" href="https://ko-fi.com/stardream_software">Support</a>
+    <details class="lang"><summary aria-label="Language">English</summary><div><a href="./" data-lang="en" lang="en" aria-current="true">English</a><a href="ko/" data-lang="ko" lang="ko">한국어</a><a href="ja/" data-lang="ja" lang="ja">日本語</a></div></details>
+    <a class="btn small" href="#download">Download</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="stage">
+      <div class="win">
+        <div class="bar"><i></i><i></i><i></i><span>Solche</span></div>
+        <div class="shot"><img src="img/en/desktop.jpg" alt="Solche timeline on a desktop" width="1800" height="1057"></div>
+      </div>
+      <div class="phone hero-phone" id="hero-phone">
+        <img class="day" src="img/en/tl-light.jpg" alt="Solche timeline on a phone" width="900" height="1957">
+        <img class="dark" src="img/en/tl-dark.jpg" alt="Solche timeline in dark mode" width="900" height="1957">
+      </div>
+      <div class="mode" role="group" aria-label="Phone screen brightness">
+        <button type="button" class="on" data-mode="day" aria-pressed="true">Day</button>
+        <button type="button" data-mode="dark" aria-pressed="false">Night</button>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>Post like it's social media.<br><em>For no one but you.</em></h1>
+      <p class="lead">Jot things down as casually as you'd post them. Passing thoughts, everyday photos, even replies to your own posts all stay on your device. No account, no server, no audience to worry about.</p>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/solche/id6758111055">Get it free on the App Store</a>
+        <span>Out now for iPhone, iPad, Mac and Windows<br><a href="#download">Windows · Android · Linux details</a></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head">
+        <h2>A blank note is hard to start.<br>A timeline only needs one line.</h2>
+      </div>
+      <div class="three">
+        <div class="say">
+          <small>A notes app</small>
+          <b>"What do I even title this?"</b>
+          <p>A new document greets you with a blank page. Turning a one-line thought into a whole file feels like too much, so you end up closing the window.</p>
+        </div>
+        <div class="say">
+          <small>A private social account</small>
+          <b>"What if someone sees it anyway?"</b>
+          <p>Even behind a lock, your posts still sit on someone else's server. So the things you really mean never quite get written.</p>
+        </div>
+        <div class="say solche">
+          <small>Solche</small>
+          <b>"Just type whatever comes to mind."</b>
+          <p>Type it in and tap Save. That's it! New posts stack up at the top, and not a single character leaves your device.</p>
+        </div>
+      </div>
+
+      <div class="try" aria-label="Try Solche right here">
+        <span class="tape"></span>
+        <div class="try-top">
+          <b>Try writing a line right here</b>
+          <span>It disappears when you refresh. And of course, nothing you type here is sent anywhere.</span>
+        </div>
+        <form id="try-form" class="try-form">
+          <span class="ava" aria-hidden="true"></span>
+          <input id="try-input" type="text" maxlength="200" placeholder="Enter your memo" aria-label="Memo input">
+          <button class="btn small" type="submit">Save</button>
+        </form>
+        <div id="try-feed"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenes">
+    <div class="wrap">
+      <div class="head">
+        <h2>One timeline, as many ways to use it as you like</h2>
+      </div>
+      <div class="scenes">
+        <div class="scene-phone is-desk">
+          <div class="phone" id="scene-phone">
+            <img src="img/en/tl-light.jpg" alt="" width="900" height="1957" class="on">
+            <img src="img/en/photos.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="img/en/thread.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="img/en/tl-dark.jpg" alt="" width="900" height="1957" loading="lazy">
+            <div class="focus" id="scene-focus"></div>
+          </div>
+          <div class="desk stage" id="scene-desk" aria-hidden="true">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="img/en/desk-narrow.jpg" alt="" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="scene-text">
+          <article data-scene="0" class="on">
+            <small>At the corner of your desk</small>
+            <h3>Keep it in a narrow window beside your work</h3>
+            <p>Shrink the window and park it next to whatever you're working on. Pin this year's goals or a favorite quote to the top, and a quick glance is enough to get you back on track.</p>
+            <p class="aside">Tip: hide the profile picture and your text gets more room, even in a narrow window!</p>
+            <div class="desk inline">
+            <div class="desk-work"><div class="desk-bar"><span></span><span></span><span></span></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="desk-win">
+              <div class="desk-bar"><span></span><span></span><span></span><b>Solche</b></div>
+              <div class="desk-shot"><img src="img/en/desk-narrow.jpg" alt="Solche in a narrow window at the side of a computer screen" width="900" height="1500" loading="lazy"><div class="desk-focus"></div></div>
+            </div>
+          </div>
+          </article>
+          <article data-scene="1">
+            <small>In everyday life</small>
+            <h3>Moments too small to share, but worth keeping</h3>
+            <p>The view on a walk, the neighborhood bakery, a single latte. Add up to 10 photos per post and fill a daily feed that's all yours. With no likes to chase, even a quick snapshot feels just right.</p>
+            <div class="phone inline"><img src="img/en/photos.jpg" alt="A post with three photos" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="2">
+            <small>When one thought leads to another</small>
+            <h3>Today's you, replying to yesterday's you</h3>
+            <p>Reply to an idea you had and keep the thought going. You never have to rewrite the original post, so the way your thinking grew stays right there on the page.</p>
+            <div class="phone inline"><img src="img/en/thread.jpg" alt="Replies added under my own post" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="3">
+            <small>Late at night</small>
+            <h3>A safe place for the things you can't tell anyone</h3>
+            <p>Only you will ever read this, so there's no need to choose your words or dress them up. Switch to dark mode in a dim room and say what's on your mind, exactly as it is.</p>
+            <div class="phone inline"><img src="img/en/tl-dark.jpg" alt="Timeline in dark mode" width="900" height="1957" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h2>Simple,<br>but with everything you'll end up needing</h2>
+      </div>
+      <ul class="brief">
+        <li><b>Reply to yourself</b>Keep a thought going, like a thread.</li>
+        <li><b>Up to 10 photos</b>Add several to one post and see them right in the timeline.</li>
+        <li><b>Quick search</b>Find that post from ages ago with a single word.</li>
+        <li><b>Pin to top</b>Keep what you don't want to forget where you'll always see it.</li>
+        <li><b>Folders</b>Keep topics apart by sorting them into folders.</li>
+        <li><b>Make it yours</b>Dark mode, font size, background color: set it up your way.</li>
+        <li><b>Safe backups</b>Changing devices? Move everything in a single file.</li>
+        <li><b>11 languages</b>English, 한국어, 日本語 and eight more.</li>
+        <li><b>Fully offline</b>Opens right away, anywhere, with no internet connection.</li>
+      </ul>
+      <p class="more"><a class="btn" href="guide/">See every feature in detail</a></p>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <div class="wrap narrow">
+      <div class="ideas">
+        <h3>Things I'm quietly thinking about</h3>
+        <p>This is my own little memo of ideas that might be fun to add someday. None of them are in the app yet, and they aren't promises, but I wanted to share them!</p>
+        <ul>
+          <li><b>More than one me:</b> Several profiles in a single timeline. Imagine a reply on your post from your favorite character's profile. Kind of reassuring, right?</li>
+          <li><b>Decorate it like your room:</b> More freedom with background photos and themes, so it really feels like your own secret room.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="panel">
+        <h2>Privacy isn't an option here.<br>It's how Solche was built from the start.</h2>
+        <p class="sub">A private account isn't truly private if your posts are stored on someone else's server. So Solche was designed to work with no server at all.</p>
+        <div class="four">
+          <div><b>No account</b><span>No sign-up, no login, no email address. It never asks.</span></div>
+          <div><b>No server</b><span>Every post and photo is stored only on your device.</span></div>
+          <div><b>No internet connection</b><span>The app never connects to the internet, so your posts simply have no way out.</span></div>
+          <div><b>Backups in your hands</b><span>Instead of a cloud, you export a file yourself and keep it wherever you choose.</span></div>
+        </div>
+        <p class="site-note">This website doesn't track visitors either. No cookies, no analytics, not even external fonts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="head">
+        <h2>Get started with Solche</h2>
+        <p>Free · No ads · No sign-up</p>
+      </div>
+      <div class="plats">
+        <div>
+          <b>iPhone · iPad · Mac</b><span>Available now on the App Store.</span>
+          <a class="btn small" href="https://apps.apple.com/app/solche/id6758111055">Get it on the App Store</a>
+        </div>
+        <div>
+          <b>Android</b><span>Currently in closed testing! Join the group and you can install it right away.</span>
+          <a href="https://groups.google.com/g/solche-testers">1. Join the tester group</a>
+          <a href="https://play.google.com/apps/testing/com.firststarhana.solche">2. Install from Google Play</a>
+        </div>
+        <div>
+          <b>Windows</b><span>Available now on the Microsoft Store.</span>
+          <a class="btn small" href="https://apps.microsoft.com/detail/9P13CN23QGMH">Get it from the Microsoft Store</a>
+        </div>
+        <div><b>Linux</b><span>Working hard on the Snap Store release.</span><em>Coming soon</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="maker">
+    <div class="wrap">
+      <div class="head">
+        <h2>Made with care by a solo developer</h2>
+        <p>Solche is planned and built by one person, under the name Stardream. Right now it has no ads and no in-app purchases.</p>
+      </div>
+      <div class="maker">
+        <div>
+          <b>Buy the developer a treat</b>
+          <span>If you like the app, a little support means a lot. It really helps me keep polishing Solche for a long time to come!</span>
+          <a class="btn small" href="https://ko-fi.com/stardream_software">Support</a>
+        </div>
+        <div>
+          <b>Work with me · Contact</b>
+          <span>Job offers and freelance project inquiries are always welcome.</span>
+          <a class="btn small" data-u="siawh28" data-d="naver.com" href="#maker">Send an email</a>
+          <small class="mail-addr" data-u="siawh28" data-d="naver.com" data-show></small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stardream</span>
+    <span class="links">
+      <a href="https://ko-fi.com/post/Privacy-Policy-for-Solche-X1Q321Q5OX">Privacy Policy</a>
+      <a data-u="siawh28" data-d="naver.com" href="#maker">Contact</a>
+    </span>
+    <p class="credit">Photos in the app screenshots are from <a href="https://unsplash.com">Unsplash</a>, by Zoë Gayah Jonker, Alexander Naglestad, Rachelle O'Brien, Suhyeon Choi, Ramiro Pianarosa, Stephan Widua, Yeh Xintong, Sean Oulashin, Maddi Bazzocco, Mateusz Feliksik, E I, Zac Ong</p>
+  </div>
+</footer>
+
+<script>window.SOLCHE={"me": "Me", "now": "Just now", "pin": "Pin", "pinned": "Pinned", "reply": "Reply", "replyPh": "Write a reply", "replyLabel": "Reply input", "save": "Save", "del": "Delete", "screen": " screen", "sample": "Some days you just need to write it down and let it go. Try adding a reply, too.", "focus": [[21.5, 16.3], [23.5, 39.8], [21.7, 36.0], null]};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>
