@@ -199,6 +199,17 @@ kbd { display: inline-block; min-width: 1.6em; padding: 0 6px; border: 1px solid
 .maker b { font-size: 18px; }
 .maker span { flex: 1; color: var(--soft); font-size: 15px; }
 .maker .btn { margin-top: 6px; }
+/* 한국어 페이지의 카카오페이 후원: 휴대폰은 버튼, 마우스를 쓰는 컴퓨터는 QR(링크가 휴대폰에서만 열림) */
+.maker .kpay + .qr + .btn { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+.maker .kpay + .qr + .btn:hover { background: #dfe8ff; }
+.maker .qr { display: none; align-items: center; gap: 12px; margin-top: 6px; }
+.maker .qr img { flex: none; width: 96px; height: 96px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.maker .qr p { margin: 0; font-size: 14px; color: var(--soft); }
+.maker .qr p b { display: block; font-size: 15px; color: var(--ink); }
+@media (hover: hover) and (pointer: fine) {
+  .maker .qr { display: flex; }
+  .maker .kpay { display: none; }
+}
 .maker em { margin-top: 6px; font-style: normal; font-size: 14px; font-weight: 700; color: var(--blue); }
 
 footer { padding: 26px 0 64px; border-top: 1px solid var(--line); color: var(--soft); font-size: 14px; }
