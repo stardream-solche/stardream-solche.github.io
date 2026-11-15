@@ -17,6 +17,25 @@
     document.querySelectorAll('details.lang[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
   });
 
+  /* ---------- 후원 QR(한국어 페이지): 마우스를 쓰는 컴퓨터에서는 버튼을 누르면 그 QR 하나만 보여 준다 ----------
+     송금 링크는 휴대폰에서만 제대로 열린다. 터치 기기에서는 가로채지 않고 링크가 그대로 열리게 둔다. */
+  var payBtns = document.querySelectorAll('.pay[data-qr]');
+  var qrBox = document.querySelector('.maker .qr');
+  if (payBtns.length && qrBox) {
+    var finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+    payBtns.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        if (!finePointer.matches) return;
+        e.preventDefault();
+        var open = btn.getAttribute('aria-expanded') !== 'true';
+        payBtns.forEach(function (o) { o.setAttribute('aria-expanded', o === btn && open ? 'true' : 'false'); });
+        qrBox.querySelectorAll('img').forEach(function (img) { img.hidden = !(open && img.dataset.qr === btn.dataset.qr); });
+        qrBox.querySelector('b').textContent = btn.textContent;
+        qrBox.hidden = !open;
+      });
+    });
+  }
+
   /* ---------- 첫 화면 낮/밤 ---------- */
   var heroPhone = document.getElementById('hero-phone');
   var modeBtns = document.querySelectorAll('[data-mode]');

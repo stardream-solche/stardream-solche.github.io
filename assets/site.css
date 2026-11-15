@@ -199,17 +199,16 @@ kbd { display: inline-block; min-width: 1.6em; padding: 0 6px; border: 1px solid
 .maker b { font-size: 18px; }
 .maker span { flex: 1; color: var(--soft); font-size: 15px; }
 .maker .btn { margin-top: 6px; }
-/* 한국어 페이지의 카카오페이·네이버페이 후원: 휴대폰은 버튼, 마우스를 쓰는 컴퓨터는 QR */
+/* 한국어 페이지의 카카오페이·네이버페이 후원: 휴대폰은 버튼이 바로 송금 화면을 열고,
+   마우스를 쓰는 컴퓨터는 버튼을 누르면 그 QR 하나만 보여 준다(site.js) */
 .maker .qr + .btn { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
 .maker .qr + .btn:hover { background: #dfe8ff; }
-.maker .qr { display: none; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; }
-.maker .qr figure { margin: 0; text-align: center; font-size: 14px; font-weight: 700; }
-.maker .qr img { display: block; box-sizing: border-box; width: 112px; height: 112px; margin-bottom: 2px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
-.maker .qr p { flex-basis: 100%; margin: 0; font-size: 14px; color: var(--soft); }
-@media (hover: hover) and (pointer: fine) {
-  .maker .qr { display: flex; }
-  .maker .pay { display: none; }
-}
+.maker .pay[aria-expanded="true"] { background: var(--blue); }
+.maker .qr { display: flex; align-items: center; gap: 14px; margin-top: 6px; }
+.maker .qr[hidden], .maker .qr img[hidden] { display: none; }
+.maker .qr img { flex: none; box-sizing: border-box; width: 132px; height: 132px; padding: 5px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.maker .qr p { margin: 0; font-size: 14px; color: var(--soft); }
+.maker .qr p b { display: block; font-size: 15px; color: var(--ink); }
 .maker em { margin-top: 6px; font-style: normal; font-size: 14px; font-weight: 700; color: var(--blue); }
 
 footer { padding: 26px 0 64px; border-top: 1px solid var(--line); color: var(--soft); font-size: 14px; }
