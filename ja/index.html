@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Solche — 誰にも見せない、自分だけのSNS</title>
-<meta name="description" content="誰にも見せない、自分だけのSNS。アカウントもサーバーもなく、すべての記録は自分の端末の中だけに残ります。">
+<meta name="description" content="誰にも見せない、自分だけのSNS。アカウントもサーバーもなく、投稿と写真は自分の端末に保存されます。">
 <meta property="og:title" content="Solche — 誰にも見せない、自分だけのSNS">
-<meta property="og:description" content="アカウントもサーバーもなく、すべての記録は自分の端末の中だけに残ります。">
+<meta property="og:description" content="アカウントもサーバーもなく、投稿と写真は自分の端末に保存されます。">
 <meta property="og:image" content="https://stardream-solche.github.io/img/ja/og.jpg">
 <link rel="canonical" href="https://stardream-solche.github.io/ja/">
 <link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/">
@@ -56,7 +56,7 @@
 
     <div class="intro">
       <h1>誰にも見せない<br><em>自分だけのSNS</em></h1>
-      <p class="lead">SNSに投稿するみたいに、気軽に書いてみてください。ふと浮かんだ考えも、日常の写真も、自分の投稿につけた返信も、すべて自分の端末の中だけに残ります。アカウントも、サーバーも、気をつかう相手もいません。</p>
+      <p class="lead">SNSに投稿するみたいに、気軽に書いてみてください。ふと浮かんだ考えも、日常の写真も、自分の投稿につけた返信も、すべて自分の端末の中に保存されます。アカウントも、サーバーも、気をつかう相手もいません。</p>
       <div class="cta">
         <a class="btn" href="https://apps.apple.com/app/solche/id6758111055">App Storeで無料ダウンロード</a>
         <span>iPhone · iPad · Mac · Windowsで公開中<br><a href="#download">Windows · Android · Linuxのご案内</a></span>
@@ -83,7 +83,7 @@
         <div class="say solche">
           <small>Solche</small>
           <b>「思いついたまま、ぽんと。」</b>
-          <p>入力欄に書いて保存を押すだけ！新しい投稿が上に積み重なり、端末の外には一文字も出ていきません。</p>
+          <p>入力欄に書いて保存を押すだけ！新しい投稿が上に積み重なり、オプションのAIフレンドをオンにしない限り、端末の外には一文字も出ていきません。</p>
         </div>
       </div>
 
@@ -114,6 +114,7 @@
             <img src="../img/ja/tl-light.jpg" alt="" width="900" height="1957" class="on">
             <img src="../img/ja/photos.jpg" alt="" width="900" height="1957" loading="lazy">
             <img src="../img/ja/thread.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="../img/ja/ai-thread.jpg" alt="" width="900" height="1957" loading="lazy">
             <img src="../img/ja/tl-dark.jpg" alt="" width="900" height="1957" loading="lazy">
             <div class="focus" id="scene-focus"></div>
           </div>
@@ -152,6 +153,21 @@
             <div class="phone inline"><img src="../img/ja/thread.jpg" alt="自分の投稿に続けて付けた返信" width="900" height="1957" loading="lazy"></div>
           </article>
           <article data-scene="3">
+            <small>ひとりごとに返事がほしいとき</small>
+            <h3>投稿に返信してくれるAIフレンド</h3>
+            <p>お望みならAIフレンドをオンにしてみてください。投稿すると返信してくれて、こちらが返すと会話が続きます。添付した写真も見て話してくれます。</p>
+            <p>名前も写真も話し方も、自分の好きなように決められます。</p>
+            <div class="friends">
+              <figure><img src="../img/ai/robot.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>モモ</figcaption></figure>
+              <figure><img src="../img/ai/cat.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>タマ</figcaption></figure>
+              <figure><img src="../img/ai/dog.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>コロ</figcaption></figure>
+              <figure><img src="../img/ai/woman.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>すみれ</figcaption></figure>
+              <figure><img src="../img/ai/man.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>ハルト</figcaption></figure>
+            </div>
+            <p class="aside">オプション機能です。ご自身で発行したAPIキー（Google Gemini または xAI Grok）を入力するとオンになり、オンの間は返信をもらう投稿と写真、最近の投稿の一部が、選んだAIサービスに送信されます。</p>
+            <div class="phone inline"><img src="../img/ja/ai-thread.jpg" alt="AIフレンドとやり取りした返信" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="4">
             <small>夜が更けていくころ</small>
             <h3>誰にも言えないことを打ち明けられる避難所</h3>
             <p>自分しか見ない場所だから、言葉を選んだり飾ったりする必要はありません。明かりを消した部屋では落ち着いたダークモードに切り替えて、心にしまっていた言葉をそのまま書き出してみてください。</p>
@@ -188,7 +204,7 @@
         <h3>こっそり構想中のこと</h3>
         <p>これから入れてみたら面白そうだな、と思っていることの小さなメモです。まだアプリに入っている機能ではなく、必ず作るという約束でもありませんが、少しだけ共有します！</p>
         <ul>
-          <li><b>自分を知っているAIの友だち：</b>投稿するとAIの友だちが返信してくれて、会話も続けられる機能です。その投稿だけを見るのではなく、これまでに書いた投稿や写真、返信まで覚えていて話しかけてくれます。もちろんAIも端末の中だけで動かして、書いたことが外に出ないように作るつもりです。</li>
+          <li><b>端末の中だけで動くAIフレンド：</b>1.2.0でオプションのAIフレンドが入りましたが、いまはご自身のキーでAIサービスに問い合わせる仕組みです。</li>
           <li><b>何人もの自分：</b>ひとつのタイムラインの中で、プロフィールをいくつも使う機能です。自分の投稿に推しキャラのプロフィールで返信が付いたら、けっこう心強いですよね？</li>
           <li><b>自分の部屋のように飾る：</b>背景写真やテーマをもっと自由に変えて、本当に自分だけの秘密の部屋のように飾れる機能です。</li>
         </ul>
@@ -203,10 +219,11 @@
         <p class="sub">鍵アカウントでも、投稿が誰かのサーバーに保存されるなら、完全な秘密とは言えません。Solcheは最初からサーバーなしで動くように設計しました。</p>
         <div class="four">
           <div><b>アカウントなし</b><span>会員登録も、ログインも、メールアドレスの入力も求めません。</span></div>
-          <div><b>サーバーなし</b><span>すべての投稿と写真は、自分の端末の中だけに保存されます。</span></div>
-          <div><b>インターネット接続なし</b><span>アプリはインターネットに一切接続しないので、外に漏れる通り道そのものがありません。</span></div>
+          <div><b>サーバーなし</b><span>私たちが運営するサーバーはありません。投稿と写真は自分の端末に保存されます。</span></div>
+          <div><b>オンにするまで接続なし</b><span>オプションのAIフレンドをオンにしない限り、アプリはインターネットに接続しません。</span></div>
           <div><b>バックアップは自分の手で</b><span>クラウドの代わりに、自分でファイルに書き出して好きな場所に安全に保管します。</span></div>
         </div>
+        <p class="site-note"><b>オプションのAIフレンドについて（1.2.0から）：</b>ご自身で発行したAPIキー（Google Gemini または xAI Grok）を入力するまではオフのままです。オンの間は、返信をもらう投稿と写真、最近の投稿の一部が選んだサービスに送信され、そのサービスの方針に従って一定期間保管されることがあります。キーを削除すれば、それ以降は何も送信されません。</p>
         <p class="site-note">いまご覧のこのホームページも、訪問者を一切追跡しません。Cookieも、解析ツールも、外部フォントさえ使っていません。</p>
       </div>
     </div>
@@ -270,7 +287,7 @@
   </div>
 </footer>
 
-<script>window.SOLCHE={"me": "自分", "now": "たった今", "pin": "固定", "pinned": "固定中", "reply": "返信", "replyPh": "返信を入力してください", "replyLabel": "返信入力", "save": "保存", "del": "削除", "screen": "の画面", "sample": "ただ書き出して、すっきり手放したい日もありますよね。返信も付けてみてください。", "focus": [[21.5, 16.3], [21.5, 39.8], [21.7, 36.0], null]};</script>
+<script>window.SOLCHE={"me": "自分", "now": "たった今", "pin": "固定", "pinned": "固定中", "reply": "返信", "replyPh": "返信を入力してください", "replyLabel": "返信入力", "save": "保存", "del": "削除", "screen": "の画面", "sample": "ただ書き出して、すっきり手放したい日もありますよね。返信も付けてみてください。", "focus": [[21.5, 16.3], [21.5, 39.8], [21.7, 36.0], [35.7, 49.6], null]};</script>
 <script src="../assets/site.js"></script>
 </body>
 </html>

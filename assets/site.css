@@ -121,6 +121,11 @@ h2 { margin: 0; font-size: clamp(27px, 3.6vw, 40px); line-height: 1.32; letter-s
 .scene-text h3 { margin: 6px 0 12px; font-size: clamp(24px, 2.8vw, 32px); line-height: 1.35; letter-spacing: -.02em; }
 .scene-text p { margin: 0 0 10px; color: var(--soft); font-size: 17px; }
 .scene-text .aside { font-size: 15px; }
+/* AI 친구 장면: 예시 프로필 다섯 개 */
+.friends { display: grid; grid-template-columns: repeat(5, minmax(0, 58px)); gap: 14px; margin: 8px 0 18px; }
+.friends figure { margin: 0; text-align: center; }
+.friends img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 6px 14px -8px rgba(20, 30, 70, .35); }
+.friends figcaption { margin-top: 6px; color: var(--soft); font-size: 13px; line-height: 1.3; }
 .phone.inline { display: none; }
 /* 첫 장면: 휴대폰 대신 컴퓨터 화면 한쪽에 좁게 띄운 창 */
 #scene-phone { transition: opacity .4s; }
@@ -183,6 +188,7 @@ kbd { display: inline-block; min-width: 1.6em; padding: 0 6px; border: 1px solid
 .four b { display: block; margin-bottom: 4px; font-size: 17px; }
 .four span { color: var(--soft); font-size: 15px; }
 .site-note { margin: 32px 0 0; font-size: 14px; color: var(--soft); }
+.site-note + .site-note { margin-top: 10px; }
 
 /* 다운로드 */
 .plats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }

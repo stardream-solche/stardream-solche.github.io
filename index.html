@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Solche — Your private timeline</title>
-<meta name="description" content="A social-style timeline that only you can see. No account, no server. Everything you write stays on your device.">
+<meta name="description" content="A social-style timeline that only you can see. No account, no server. Your posts and photos are stored on your device.">
 <meta property="og:title" content="Solche — Your private timeline">
-<meta property="og:description" content="No account, no server. Everything you write stays on your device.">
+<meta property="og:description" content="No account, no server. Your posts and photos are stored on your device.">
 <meta property="og:image" content="https://stardream-solche.github.io/img/en/og.jpg">
 <link rel="canonical" href="https://stardream-solche.github.io/">
 <link rel="alternate" hreflang="en" href="https://stardream-solche.github.io/">
@@ -57,7 +57,7 @@
 
     <div class="intro">
       <h1>Post like it's social media.<br><em>For no one but you.</em></h1>
-      <p class="lead">Jot things down as casually as you'd post them. Passing thoughts, everyday photos, even replies to your own posts all stay on your device. No account, no server, no audience to worry about.</p>
+      <p class="lead">Jot things down as casually as you'd post them. Passing thoughts, everyday photos, even replies to your own posts are all kept on your device. No account, no server, no audience to worry about.</p>
       <div class="cta">
         <a class="btn" href="https://apps.apple.com/app/solche/id6758111055">Get it free on the App Store</a>
         <span>Out now for iPhone, iPad, Mac and Windows<br><a href="#download">Windows · Android · Linux details</a></span>
@@ -84,7 +84,7 @@
         <div class="say solche">
           <small>Solche</small>
           <b>"Just type whatever comes to mind."</b>
-          <p>Type it in and tap Save. That's it! New posts stack up at the top, and not a single character leaves your device.</p>
+          <p>Type it in and tap Save. That's it! New posts stack up at the top, and unless you turn on the optional AI friend, not a single character leaves your device.</p>
         </div>
       </div>
 
@@ -115,6 +115,7 @@
             <img src="img/en/tl-light.jpg" alt="" width="900" height="1957" class="on">
             <img src="img/en/photos.jpg" alt="" width="900" height="1957" loading="lazy">
             <img src="img/en/thread.jpg" alt="" width="900" height="1957" loading="lazy">
+            <img src="img/en/ai-thread.jpg" alt="" width="900" height="1957" loading="lazy">
             <img src="img/en/tl-dark.jpg" alt="" width="900" height="1957" loading="lazy">
             <div class="focus" id="scene-focus"></div>
           </div>
@@ -153,6 +154,21 @@
             <div class="phone inline"><img src="img/en/thread.jpg" alt="Replies added under my own post" width="900" height="1957" loading="lazy"></div>
           </article>
           <article data-scene="3">
+            <small>When you'd like an answer back</small>
+            <h3>An AI friend who replies to your posts</h3>
+            <p>Turn on the AI friend if you'd like one. Post something and it replies, and when you answer, the conversation keeps going. It looks at the photos you attach, too.</p>
+            <p>Its name, picture and tone are all yours to choose.</p>
+            <div class="friends">
+              <figure><img src="img/ai/robot.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>Momo</figcaption></figure>
+              <figure><img src="img/ai/cat.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>Mochi</figcaption></figure>
+              <figure><img src="img/ai/dog.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>Coco</figcaption></figure>
+              <figure><img src="img/ai/woman.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>Violet</figcaption></figure>
+              <figure><img src="img/ai/man.jpg" alt="" width="160" height="160" loading="lazy"><figcaption>Noah</figcaption></figure>
+            </div>
+            <p class="aside">It's optional. It turns on only after you enter your own API key (Google Gemini or xAI Grok), and while it's on, the post you want a reply to, its photos and some of your recent posts are sent to the AI service you chose.</p>
+            <div class="phone inline"><img src="img/en/ai-thread.jpg" alt="Replies exchanged with the AI friend" width="900" height="1957" loading="lazy"></div>
+          </article>
+          <article data-scene="4">
             <small>Late at night</small>
             <h3>A safe place for the things you can't tell anyone</h3>
             <p>Only you will ever read this, so there's no need to choose your words or dress them up. Switch to dark mode in a dim room and say what's on your mind, exactly as it is.</p>
@@ -189,7 +205,7 @@
         <h3>Things I'm quietly thinking about</h3>
         <p>This is my own little memo of ideas that might be fun to add someday. None of them are in the app yet, and they aren't promises, but I wanted to share them!</p>
         <ul>
-          <li><b>An AI friend who knows you:</b> Post something and an AI friend replies and keeps the conversation going. It wouldn't just read that one post. It would remember the posts, photos and replies you've written so far. And the AI would run only on your device, so nothing you write leaves it.</li>
+          <li><b>An AI friend that runs only on your device:</b> An optional AI friend has arrived in version 1.2.0, and for now it works through an AI service with your own key.</li>
           <li><b>More than one me:</b> Several profiles in a single timeline. Imagine a reply on your post from your favorite character's profile. Kind of reassuring, right?</li>
           <li><b>Decorate it like your room:</b> More freedom with background photos and themes, so it really feels like your own secret room.</li>
         </ul>
@@ -204,10 +220,11 @@
         <p class="sub">A private account isn't truly private if your posts are stored on someone else's server. So Solche was designed to work with no server at all.</p>
         <div class="four">
           <div><b>No account</b><span>No sign-up, no login, no email address. It never asks.</span></div>
-          <div><b>No server</b><span>Every post and photo is stored only on your device.</span></div>
-          <div><b>No internet connection</b><span>The app never connects to the internet, so your posts simply have no way out.</span></div>
+          <div><b>No server</b><span>We run no server. Your posts and photos are stored on your device.</span></div>
+          <div><b>No internet unless you say so</b><span>Unless you turn on the optional AI friend, the app never connects to the internet.</span></div>
           <div><b>Backups in your hands</b><span>Instead of a cloud, you export a file yourself and keep it wherever you choose.</span></div>
         </div>
+        <p class="site-note"><b>About the optional AI friend (from version 1.2.0):</b> it stays off until you enter your own API key (Google Gemini or xAI Grok). While it is on, the post you want a reply to, its photos and some of your recent posts are sent to the service you chose, and that service may keep them for a while under its own policy. Delete the key and nothing more is sent.</p>
         <p class="site-note">This website doesn't track visitors either. No cookies, no analytics, not even external fonts.</p>
       </div>
     </div>
@@ -271,7 +288,7 @@
   </div>
 </footer>
 
-<script>window.SOLCHE={"me": "Me", "now": "Just now", "pin": "Pin", "pinned": "Pinned", "reply": "Reply", "replyPh": "Write a reply", "replyLabel": "Reply input", "save": "Save", "del": "Delete", "screen": " screen", "sample": "Some days you just need to write it down and let it go. Try adding a reply, too.", "focus": [[21.5, 16.3], [23.5, 39.8], [21.7, 36.0], null]};</script>
+<script>window.SOLCHE={"me": "Me", "now": "Just now", "pin": "Pin", "pinned": "Pinned", "reply": "Reply", "replyPh": "Write a reply", "replyLabel": "Reply input", "save": "Save", "del": "Delete", "screen": " screen", "sample": "Some days you just need to write it down and let it go. Try adding a reply, too.", "focus": [[21.5, 16.3], [23.5, 39.8], [21.7, 36.0], [35.7, 52.5], null]};</script>
 <script src="assets/site.js"></script>
 </body>
 </html>
